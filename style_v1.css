@@ -1,0 +1,153 @@
+.stApp {
+    background-color: #ffffff; /* Dark navy blue */
+}
+
+img {
+    border: None;
+}
+
+
+input[type=text], input[type=email], textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ffffff; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+button[type=submit] {
+    background-color: #053da6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+button[type=submit]:hover {
+    background-color: #041578;
+}
+
+/* Custom styles for the Streamlit app */
+
+/* Style for the rounded boxes */
+.flex-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch; /* Ensure equal height */
+}
+
+.flex-item {
+    background-color: #01d5ff; /* Background color */
+    color: black; /* Black text color */
+    padding: 20px; /* Some padding */
+    border-radius: 15px; /* Rounded borders */
+    margin-bottom: 20px; /* Some space below each box */
+    display: flex;
+    flex-direction: column;
+    min-height: 200px; /* Set minimum height */
+    max-height: 300px; /* Set maximum height */
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.flex-item.introduction {
+    width: 35%; /* Set width to 35% */
+}
+
+.flex-item.how-it-works {
+    width: 65%; /* Set width to 65% */
+}
+
+.flex-item h2, .flex-item h3 {
+    color: black; /* Ensure headers inside the box are also black */
+    margin-bottom: 10px;
+}
+
+.flex-item p, .flex-item ul {
+    flex-grow: 1;
+}
+
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4565cf;
+    color: #333;
+}
+
+/* Style for Streamlit buttons */
+.stButton>button {
+    background-color: #01d5ff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.stButton>button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for Markdown headers */
+.stMarkdown h2 {
+    color: #000000;
+}
+
+.stSelectbox > div {
+    background-color: #01d5ff !important;
+    color: black !important;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+div[data-baseweb="select"] > div {
+    background-color: #01d5ff !important;  /* your preferred light blue */
+    color: #000 !important;
+}
+
+/* Fix for selected value box */
+.css-1dimb5e-singleValue {
+    background-color: #01d5ff !important;
+    color: #000 !important;
+}
+.css-1dimb5e-singleValue { box-shadow: none !important; }
+
+
+/* Additional override to avoid orange borders/focus ring */
+.css-1n76uvr-control {
+    background-color: #01d5ff !important;
+    border-color: #01d5ff !important;
+    box-shadow: none !important;
+}
+
+/* Dropdown options */
+.css-11unzgr {
+    background-color: #01d5ff !important;
+    color: #000 !important;
+}
+
+/* Style for select boxes */
+.stSelectbox select {
+    border: 1px solid #01d5ff;
+    border-color: #01d5ff;
+}
+
+.stSelectbox select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px #0056b3;
+}
+
+/* Style for text areas */
+textarea {
+    border: 1px solid #01d5ff;
+}
+
+textarea:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px #0056b3;
+}
