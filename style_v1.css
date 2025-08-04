@@ -1,9 +1,26 @@
 .stApp {
-    background-color: #ffffff; /* Dark navy blue */
+    background-color: #061431; /* Dark navy blue */
 }
 
 img {
     border: None;
+}
+.block-container {
+    padding-top: 1rem !important;
+}   
+.row-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.2rem;
+}
+.header-text p {
+        margin-top: 0;
+        font-size: 1rem;
+        color: #aaa;
 }
 
 
@@ -20,7 +37,7 @@ input[type=text], input[type=email], textarea {
 
 /* Style the submit button with a specific background color etc */
 button[type=submit] {
-    background-color: #053da6;
+    background-color: #000000;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -75,14 +92,13 @@ button[type=submit]:hover {
 /* General body styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #4565cf;
-    color: #333;
+    color: #ffffff;
 }
 
 /* Style for Streamlit buttons */
 .stButton>button {
-    background-color: #01d5ff;
-    color: black;
+    background-color: #000000;
+    color: rgb(255, 254, 254);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -95,26 +111,25 @@ body {
 
 /* Style for Markdown headers */
 .stMarkdown h2 {
-    color: #000000;
+    color: #ffffff;
 }
 
 .stSelectbox > div {
-    background-color: #01d5ff !important;
-    color: black !important;
+    background-color: black; /* Background color */
+    color: white; /* Black text color */
     border-radius: 5px;
     padding: 5px;
 }
 
 div[data-baseweb="select"] > div {
-    background-color: #01d5ff !important;  /* your preferred light blue */
-    color: #000 !important;
-}
+    background-color: black; /* Background color */
+    color: white; /* Black text color */}
 
 /* Fix for selected value box */
 .css-1dimb5e-singleValue {
-    background-color: #01d5ff !important;
-    color: #000 !important;
-}
+    background-color: black; /* Background color */
+    color: white; /* Black text color */}
+
 .css-1dimb5e-singleValue { box-shadow: none !important; }
 
 
@@ -127,27 +142,27 @@ div[data-baseweb="select"] > div {
 
 /* Dropdown options */
 .css-11unzgr {
-    background-color: #01d5ff !important;
-    color: #000 !important;
-}
+    background-color: black; /* Background color */
+    color: white; /* Black text color */}
+
 
 /* Style for select boxes */
 .stSelectbox select {
-    border: 1px solid #01d5ff;
-    border-color: #01d5ff;
+    border: 1px solid #000000;
+    border-color: black;
 }
 
 .stSelectbox select:focus {
-    border-color: #0056b3;
-    box-shadow: 0 0 5px #0056b3;
+    border-color: black;
+    box-shadow: 0 0 5px black;
 }
 
 /* Style for text areas */
 textarea {
-    border: 1px solid #01d5ff;
+    border: 1px solid black;
 }
 
 textarea:focus {
-    border-color: #0056b3;
-    box-shadow: 0 0 5px #0056b3;
+    border-color: black;
+    box-shadow: 0 0 5px black;
 }

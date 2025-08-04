@@ -25,21 +25,29 @@ data['heart_disease'] = data['heart_disease'].apply(lambda x: 1 if x == 'yes' el
 
 icon = Image.open("logo.jpg")
 st.set_page_config(layout='wide', page_title='AI-Powered Heart Disease Assessment', page_icon=icon)
-
-st.image(logo, width=100)  # Change 200 to whatever size looks good
+# Change 200 to whatever size looks good
 
 # Custom CSS
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("style_v1.css")
-
 # Main layout with three columns
 row0_0, row0_1, row0_2, row0_3 = st.columns((0.08, 6, 3, 0.17))
-with row0_1:
-    st.title("HoloMed AI Production: Heart Disease Predictor")
-    st.write("Unmatched Accuracy with Cutting-Edge Machine Learning Models")
+with st.container():
+    st.markdown('<div class="row-header">', unsafe_allow_html=True)
+    col1, col2 = st.columns([1, 5])
+    with col1:
+        st.image(logo, width=100)
+    with col2:
+        st.markdown("""
+        <div class="header-text">
+            <h1>HoloMed AI Production: Heart Disease Predictor</h1>
+            <p>Unmatched Accuracy with Cutting-Edge Machine Learning Models</p>
+        </div>
+        """, unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+
 st.write('---')
 
 # Flexbox container for equal height boxes
@@ -122,10 +130,6 @@ drinks_category = row6_2.selectbox("How many alcoholic drinks do you consume in 
     "moderate_consumption_5.01_to_10_drinks", "high_consumption_10.01_to_20_drinks", "very_high_consumption_more_than_20_drinks"], index=0)
 binge_drinking_status = row6_2.selectbox("Have you engaged in binge drinking in the past 30 days?", ["yes", "no"], index=1, help="Binge drinking is consuming 5 or more drinks for men, or 4 or more drinks for women, in about 2 hours!")
 exercise_status = row6_3.selectbox("Have you exercised in the past 30 days?", ["yes", "no"], index=0)
-
-with row6_1:
-    st.write("#### Learn More")
-    st.markdown("[![](https://www.instagram.com/holomedai)]")
 
 # Collect input data
 input_data = {
@@ -382,8 +386,6 @@ if btn1:
 st.write('---')
 row8_0A, row8_1B, row8_5C = st.columns((0.08, 12, 0.17))
 with row8_1B:
-    st.write("#### Learn More")
-    st.markdown("[![](https://www.instagram.com/holomedai)]")
     st.write("""
         ###### ***Disclaimer***
         *This HoloMed AI Production is not a replacement for professional medical advice, diagnosis, or treatment. Always consult your doctor or a qualified healthcare provider with any questions you may have regarding your health.*
@@ -408,8 +410,20 @@ with row9_1.expander("Leave Us a Comment or Question"):
 
 null10_0, row10_1, row10_2 = st.columns((0.04, 7, 0.4))
 with row10_1:
-    st.write("""
-        ### Contacts
-        [![](https://img.shields.io/badge/Linkedin-Connect-informational)](www.linkedin.com/in/ismail-cheema)
-        ###### © HoloMed AI, 2025 
-    """)
+    st.markdown(
+        """
+        <a href="https://www.instagram.com/holomedai" target="_blank">
+        <button style="background-color:#C13584; color:white; padding:5px 10px; border:none; border-radius:6px; cursor:pointer;">
+            HoloMed AI Instagram
+        </button>
+        </a>
+       <a href="https://www.linkedin.com/in/ismail-cheema-1577b6314/" target="_blank">
+        <button style="background-color:#0072B1; color:white; padding:5px 10px; border:none; border-radius:6px; cursor:pointer;">
+            LinkedIn [Producer]
+        </button>
+        </a>
+        <br><br>
+        <h6>© HoloMed AI, 2025</h6>
+        """,
+        unsafe_allow_html=True
+    )
