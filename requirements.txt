@@ -1,9 +1,10 @@
 streamlit==1.36.0
-pandas==1.5.3
-numpy==1.24.3
+pandas>=2.0.0
+numpy>=1.25.0
 pickleshare==0.7.5
-lightgbm==3.2.1
+lightgbm>=4.0.0
 category-encoders==2.3.0
 imbalanced-learn==0.12.3
-shap==0.40.0
-plotly==5.22.0
+shap>=0.41.0
+plotly>=5.22.0
+setuptools>=65.0.0
